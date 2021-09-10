@@ -1,4 +1,5 @@
 import java.util.*;
+import java.math.*;
 
 public class Armstrong {
     public static void main(String[] args) {
@@ -6,28 +7,31 @@ public class Armstrong {
         int low  = sc.nextInt();
         int high = sc.nextInt();
         for (int i = low; i <= high; i++) {
-            if(primecheck(i)){
+            if(armstrongcheck(i)){
                 System.out.println(i);
             }
             
         }
         
     }
-    public static boolean primecheck(int n ){
-        boolean flag = true;
-        if(n==1){
-            return false;
-        }
-        else{
-        for(int i = 2 ; i<n;i++){
-            if(n%i==0){
-                flag = false;
-                break;
-            }
-        }
-    }
-        
-        return flag;
-
+    public static boolean armstrongcheck(int n ){
+        int temp, digits=0, last=0, sum=0;   
+        temp=n;     
+        while(temp>0)    
+        {   
+        temp = temp/10;   
+        digits++;   
+        }   
+        temp = n;   
+        while(temp>0)   
+        {    
+        last = temp % 10;    
+        sum +=  (Math.pow(last, digits));      
+        temp = temp/10;   
+        }  
+        if(n==sum)     
+        return true;        
+        else return false;   
+           
     }
 }
