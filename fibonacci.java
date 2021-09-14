@@ -29,13 +29,13 @@ public class fibonacci{
     public static int fibobyrecursion(int num){
 
         if(num == 0){
+            //0 1 1 2 3 5 .......
             return 0;
         }
         else if(num == 1 || num==2){
             return 1;
         }
+        
         return fibobyrecursion(num-2) + fibobyrecursion(num-1);
-
-
     }
 }
