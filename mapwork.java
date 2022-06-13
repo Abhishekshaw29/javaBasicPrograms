@@ -17,5 +17,9 @@ public class mapwork {
               map.put(s, count + 1);
             }
           }
+
+          map.forEach((k,v) -> System.out.println("Key = "
+                + k + ", Value = " + v));
+          
     }
 }

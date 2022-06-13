@@ -2,7 +2,7 @@ import java.util.*;
 public class anagram {
     public static void main(String[] args) {
         Scanner sc  = new Scanner(System.in);
-        System.out.println("Enter the Strin1");
+        System.out.println("Enter the String1");
         char[] str = sc.nextLine().toCharArray();
         System.out.println("Enter the String2");
         char[] str2 = sc.nextLine().toCharArray();
